@@ -88,10 +88,24 @@
   }
   
   .main-nav {
-    position: absolute;
-    border-bottom: 1px solid #e9ecef;
-    background-color: white;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    transition: background-color .1s ease-in-out;
+    background-color: transparent;
+    padding-top: 0;
+    flex-direction: column;
+  }
+
+  .nav-info {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    width: 100%;
+    padding: 5px 0;
+    font-weight: bold;
+  }
+
+  .nav-phone {
+    margin: 0 10px;
   }
   
   .main-nav .navbar-brand {
@@ -113,62 +127,12 @@
     letter-spacing: 1px;
     text-transform: uppercase;
   }
-  
-  @media only screen and (min-width: 992px) {
-    .main-nav {
-      border-bottom: 1px solid transparent;
-      background: transparent;
-    }
-    .main-nav .navbar-brand {
-      padding: 10px 20px;
-      color: #fff;
-    }
-    .main-nav .navbar-brand:focus, .main-nav .navbar-brand:hover {
-      color: rgba(255, 255, 255, 0.8);
-    }
-    .main-nav .navbar-nav > li.nav-item > a {
-      padding: 10px 20px;
-      color: #fff;
-    }
-    .main-nav .navbar-nav > li.nav-item > a:focus, .main-nav .navbar-nav > li.nav-item > a:hover {
-      color: rgba(255, 255, 255, 0.8);
-    }
+
+  .window-scrolled .main-nav {
+    background-color: #fff;
   }
   
-  @media only screen and (min-width: 992px) {
-    .main-nav {
-      transition: background-color 0.2s;
-      /* Force Hardware Acceleration in WebKit */
-      transform: translate3d(0, 0, 0);
-      -webkit-backface-visibility: hidden;
-    }
-    .main-nav.is-fixed {
-      /* when the user scrolls down, we hide the header right above the viewport */
-      position: fixed;
-      top: -67px;
-      transition: transform 0.2s;
-      border-bottom: 1px solid white;
-      background-color: rgba(255, 255, 255, 0.9);
-    }
-    .main-nav.is-fixed .navbar-brand {
-      color: #212529;
-    }
-    .main-nav.is-fixed .navbar-brand:focus, .main-nav.is-fixed .navbar-brand:hover {
-      color: #0085A1;
-    }
-    .main-nav.is-fixed .navbar-nav > li.nav-item > a {
-      color: #212529;
-    }
-    .main-nav.is-fixed .navbar-nav > li.nav-item > a:focus, .main-nav.is-fixed .navbar-nav > li.nav-item > a:hover {
-      color: #0085A1;
-    }
-    .main-nav.is-visible {
-      /* if the user changes the scrolling direction, we show the header */
-      transform: translate3d(0, 100%, 0);
-    }
-  }
-  
-  header.masthead {
+  .masthead {
     margin-bottom: 50px;
     background: no-repeat center center;
     background-color: #868e96;
@@ -177,7 +141,7 @@
     background-size: cover;
   }
   
-  header.masthead .overlay {
+  .masthead .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -187,34 +151,34 @@
     opacity: 0.5;
   }
   
-  header.masthead .page-heading,
-  header.masthead .post-heading,
-  header.masthead .site-heading {
+  .masthead .page-heading,
+  .masthead .post-heading,
+  .masthead .site-heading {
     padding: 200px 0 150px;
     color: white;
   }
   
   @media only screen and (min-width: 768px) {
-    header.masthead .page-heading,
-    header.masthead .post-heading,
-    header.masthead .site-heading {
+    .masthead .page-heading,
+    .masthead .post-heading,
+    .masthead .site-heading {
       padding: 200px 0;
     }
   }
   
-  header.masthead .page-heading,
-  header.masthead .site-heading {
+  .masthead .page-heading,
+  .masthead .site-heading {
     text-align: center;
   }
   
-  header.masthead .page-heading h1,
-  header.masthead .site-heading h1 {
+  .masthead .page-heading h1,
+  .masthead .site-heading h1 {
     font-size: 50px;
     margin-top: 0;
   }
   
-  header.masthead .page-heading .subheading,
-  header.masthead .site-heading .subheading {
+  .masthead .page-heading .subheading,
+  .masthead .site-heading .subheading {
     font-size: 24px;
     font-weight: 300;
     line-height: 1.1;
@@ -224,45 +188,45 @@
   }
   
   @media only screen and (min-width: 768px) {
-    header.masthead .page-heading h1,
-    header.masthead .site-heading h1 {
+    .masthead .page-heading h1,
+    .masthead .site-heading h1 {
       font-size: 80px;
     }
   }
   
-  header.masthead .post-heading h1 {
+  .masthead .post-heading h1 {
     font-size: 35px;
   }
   
-  header.masthead .post-heading .meta,
-  header.masthead .post-heading .subheading {
+  .masthead .post-heading .meta,
+  .masthead .post-heading .subheading {
     line-height: 1.1;
     display: block;
   }
   
-  header.masthead .post-heading .subheading {
+  .masthead .post-heading .subheading {
     font-size: 24px;
     font-weight: 600;
     margin: 10px 0 30px;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   
-  header.masthead .post-heading .meta {
+  .masthead .post-heading .meta {
     font-size: 20px;
     font-weight: 300;
     font-style: italic;
     font-family: 'Lora', 'Times New Roman', serif;
   }
   
-  header.masthead .post-heading .meta a {
+  .masthead .post-heading .meta a {
     color: #fff;
   }
   
   @media only screen and (min-width: 768px) {
-    header.masthead .post-heading h1 {
+    .masthead .post-heading h1 {
       font-size: 55px;
     }
-    header.masthead .post-heading .subheading {
+    .masthead .post-heading .subheading {
       font-size: 30px;
     }
   }
