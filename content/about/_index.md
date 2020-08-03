@@ -2,5 +2,5 @@
 title: About
 sub: >-
   This is what I do.
-image: img/about-bg.jpg
+image: public/img/about-bg.jpg
 ---

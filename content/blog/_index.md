@@ -2,5 +2,6 @@
 title: Blog
 sub: >-
   Things to know
-image: img/contact-bg.jpg
+image: public/img/contact-bg.jpg
 ---
+
