@@ -35,6 +35,11 @@
           <div class="post-heading">
             <h1>{{ .Title }}</h1>
             <h2 class="subheading">{{ .Description }}</h2>
+            {{ if in (print .URL) "posts"}}
+            <span class="meta">Posted by
+              <a href="#">Start Bootstrap</a>
+              on August 24, 2019</span>
+            {{ end }}
           </div>
         </div>
       </div>

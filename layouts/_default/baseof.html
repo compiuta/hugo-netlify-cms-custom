@@ -3,7 +3,7 @@
 <html lang="{{ $.Site.Language.Lang }}">
   {{ partial "head" . }}
   
-  <body data-bodyTag class="body-tag {{ if in (print .URL) "blog"}}blog-page{{ end }}">
+  <body data-bodyTag class="body-tag {{ if in (print .URL) "posts"}}blog-post{{ end }}">
    
     {{ block "header" . }}{{ partial "nav" . }}{{ end }}
 

@@ -1,42 +1,22 @@
-// Styling for the post page
-.post-preview {
-  > a {
-    color: $gray-900;
-    &:focus,
-    &:hover {
-      text-decoration: none;
-      color: $primary;
-    }
-    > .post-title {
-      font-size: 30px;
-      margin-top: 30px;
-      margin-bottom: 10px;
-    }
-    > .post-subtitle {
-      font-weight: 300;
-      margin: 0 0 10px;
-    }
-  }
-  > .post-meta {
-    font-size: 18px;
+.section-heading,
+.blog-post h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 60px;
+}
+
+.blog-post img {
+  max-width: 100%;
+  height: auto;
+}
+
+.blog-post img + span {
+    font-size: 14px;
     font-style: italic;
-    margin-top: 0;
-    color: $gray-600;
-    > a {
-      text-decoration: none;
-      color: $gray-900;
-      &:focus,
-      &:hover {
-        text-decoration: underline;
-        color: $primary;
-      }
-    }
-  }
-  @media only screen and (min-width: 768px) {
-    > a {
-      > .post-title {
-        font-size: 36px;
-      }
-    }
-  }
+    display: block;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    border-bottom-right-radius: 5px;
+    color: #6c757d;
 }
