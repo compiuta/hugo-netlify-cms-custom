@@ -1,15 +1,16 @@
- 
 <!doctype html>
 <html lang="{{ $.Site.Language.Lang }}">
-  {{ partial "head" . }}
-  
-  <body data-bodyTag class="body-tag {{ if in (print .URL) "posts"}}blog-post{{ end }}">
-   
-    {{ block "header" . }}{{ partial "nav" . }}{{ end }}
+    {{ partial "head/head.html" . }}
 
-    {{ block "main" . }}{{ end }}
+    <body data-bodyTag class="body-tag {{ if in (print .URL) "posts"}}blog-post{{ end }}">
+        <div class="layout-styled">
 
-    {{ block "footer" . }}{{ partial "footer" . }}{{ end }}
+            {{ partial "nav" . }}
 
-  </body>
+            {{ block "main" . }}{{ end }}
+            
+            {{ partial "footer" . }}
+
+        </div>
+    </body>
 </html>

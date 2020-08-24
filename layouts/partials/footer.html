@@ -70,5 +70,5 @@
   </div>
 </footer>
 
-<!-- Custom scripts for this template -->
-<script src="/public/js/app.min.js"></script>
+{{ $script := resources.Get "js/app.js" }}
+<script src="{{ $script.RelPermalink }}"></script>
